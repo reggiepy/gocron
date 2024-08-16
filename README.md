@@ -4,6 +4,11 @@
 [![Release](https://img.shields.io/github/release/ouqiang/gocron.svg?label=Release)](https://github.com/ouqiang/gocron/releases)
 
 # 项目简介
+
+> 感谢原项目[ouqiang/gocron](https://github.com/ouqiang/gocron)的支持。
+>
+> 感谢[wixb50/gocron](https://github.com/wixb50/gocron)的参考。
+
 使用Go语言开发的轻量级定时任务集中调度和管理系统, 用于替代Linux-crontab [查看文档](https://github.com/ouqiang/gocron/wiki)
 
 原有的延时任务拆分为独立项目[延迟队列](https://github.com/ouqiang/delay-queue)  
@@ -31,6 +36,13 @@
 ### 支持平台
 > Windows、Linux、Mac OS
 
+Windows Build
+
+```bash
+set CGO_ENABLED=1
+go build ./cmd/gocron
+go build ./cmd/node
+```
 ### 环境要求
 >  MySQL
 
@@ -80,7 +92,7 @@ docker run --name gocron --link mysql:db -p 5920:5920 -d ouqg/gocron
 
 ### 开发
 
-1. 安装Go1.9+, Node.js, Yarn
+1. 安装Go1.9+, Node.js v8.17.0, Yarn
 2. 安装前端依赖 `make install-vue`
 3. 启动gocron, gocron-node `make run`
 4. 启动node server `make run-vue`, 访问地址 http://localhost:8080
@@ -136,6 +148,11 @@ docker run --name gocron --link mysql:db -p 5920:5920 -d ouqg/gocron
 提交[issue](https://github.com/ouqiang/gocron/issues/new)
 
 ## ChangeLog
+
+## [v1.5.1](https://github.com/reggiepy/gocron)
+
+- 支持Sqlite3数据库
+
 
 v1.5
 --------
